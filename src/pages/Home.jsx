@@ -6,7 +6,7 @@ import { ArrowRight, Heart, Home as HomeIcon, UserCheck, Utensils, Activity, Cal
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import ContactForm from '@/components/ContactForm';
-import HeroSlider from '@/components/HeroSlider';
+
 import { FadeIn, ScaleIn, SlideIn, StaggerContainer, StaggerItem, ParallaxSection } from '@/components/ScrollReveal';
 import SEO from '@/components/SEO';
 
@@ -22,46 +22,46 @@ export default function Home() {
   }, []);
 
   const features = [
-  {
-    icon: HomeIcon,
-    title: "Adult Foster Care",
-    description: "Providing a supportive, family-like environment for adults who require assistance with daily living."
-  },
-  {
-    icon: Pill,
-    title: "Medication Management",
-    description: "Just AFC has medication management and security. We take our residents health seriously."
-  },
-  {
-    icon: Shirt,
-    title: "Laundry",
-    description: "We offer laundry machines for our residents and full bathing/showering facilities."
-  },
-  {
-    icon: Utensils,
-    title: "Full-service dining",
-    description: "Our locations are equipped with Kitchens where residents can prepare their meals."
-  },
-  {
-    icon: CalendarCheck,
-    title: "Medical Appointment Assistance",
-    description: "We offer help and support for making medical appointments"
-  },
-  {
-    icon: Apple,
-    title: "Feeding & Diet",
-    description: "We offer the support needed for residents on specialized diets and will assist those that need meal planning and preparation."
-  },
-  {
-    icon: ShowerHead,
-    title: "Bathing Assistance",
-    description: "Our homes and staff can assist residents with bathing needs."
-  },
-  {
-    icon: Moon,
-    title: "Night Time Care",
-    description: "We offer night time care and monitoring of residents for their security and ours."
-  }];
+    {
+      icon: HomeIcon,
+      title: "Adult Foster Care",
+      description: "Providing a supportive, family-like environment for adults who require assistance with daily living."
+    },
+    {
+      icon: Pill,
+      title: "Medication Management",
+      description: "Just AFC has medication management and security. We take our residents health seriously."
+    },
+    {
+      icon: Shirt,
+      title: "Laundry",
+      description: "We offer laundry machines for our residents and full bathing/showering facilities."
+    },
+    {
+      icon: Utensils,
+      title: "Full-service dining",
+      description: "Our locations are equipped with Kitchens where residents can prepare their meals."
+    },
+    {
+      icon: CalendarCheck,
+      title: "Medical Appointment Assistance",
+      description: "We offer help and support for making medical appointments"
+    },
+    {
+      icon: Apple,
+      title: "Feeding & Diet",
+      description: "We offer the support needed for residents on specialized diets and will assist those that need meal planning and preparation."
+    },
+    {
+      icon: ShowerHead,
+      title: "Bathing Assistance",
+      description: "Our homes and staff can assist residents with bathing needs."
+    },
+    {
+      icon: Moon,
+      title: "Night Time Care",
+      description: "We offer night time care and monitoring of residents for their security and ours."
+    }];
 
 
   return (
@@ -72,70 +72,72 @@ export default function Home() {
         keywords="adult foster care, AFC Lansing, senior care, assisted living, Just AFC" />
 
 
-      {/* Hero Section */}
-      <section className="relative h-[600px] md:h-[800px] flex items-center overflow-hidden">
-        <div className="absolute inset-0 z-0">
-          <HeroSlider />
-        </div>
-        {/* Darker Overlay for better text readability */}
-        <div className="absolute inset-0 bg-gradient-to-r from-emerald-950/80 via-emerald-900/60 to-transparent z-10" />
-        
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-20">
+      {/* Hero Section - Split Layout */}
+      <section className="relative min-h-[90vh] flex flex-col md:flex-row bg-cream overflow-hidden">
+        {/* Left Column: Content */}
+        <div className="w-full md:w-1/2 flex flex-col justify-center px-6 py-12 md:p-12 lg:p-16 xl:p-24 z-10">
           <motion.div
-            initial={{ opacity: 0, y: 40 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 1, ease: "easeOut" }}
-            className="max-w-4xl text-white">
+            initial={{ opacity: 0, x: -20 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.8, ease: "easeOut" }}
+            className="max-w-xl">
 
-            <div className="flex flex-wrap gap-3 mb-8">
-              <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/10 border border-white/20 text-emerald-100 text-sm font-medium backdrop-blur-md">
-                <Heart className="w-4 h-4 fill-emerald-300 text-emerald-300" />
-                <span>Compassionate Non-Medical Care</span>
-              </div>
-              <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-emerald-500/20 border border-emerald-400/30 text-emerald-50 text-sm font-bold backdrop-blur-md animate-fade-in">
-                <span className="relative flex h-3 w-3">
+            {/* Badges */}
+            <div className="flex flex-wrap gap-4 mb-8">
+              <div className="inline-flex items-center gap-2 px-3 py-1 border border-forest/30 text-forest text-xs font-sans font-bold uppercase tracking-widest">
+                <span className="relative flex h-2 w-2">
                   <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75"></span>
-                  <span className="relative inline-flex rounded-full h-3 w-3 bg-green-500"></span>
+                  <span className="relative inline-flex rounded-full h-2 w-2 bg-green-500"></span>
                 </span>
-                <span>Now Accepting New Residents</span>
+                <span>Spaces Available</span>
+              </div>
+              <div className="hidden sm:inline-flex items-center gap-2 px-3 py-1 border border-forest/30 text-forest text-xs font-sans font-bold uppercase tracking-widest">
+                <span>Non-Medical Care</span>
               </div>
             </div>
 
-            <h1 className="text-3xl sm:text-5xl md:text-7xl font-bold leading-tight mb-4 md:mb-6">
-              Where Compassion Meets <br />
-              <div className="inline-block min-w-[180px] sm:min-w-[300px] h-[1.2em] overflow-hidden relative">
-                <AnimatePresence mode="wait">
-                  <motion.span
-                    key={words[wordIndex]}
-                    initial={{ y: "100%" }}
-                    animate={{ y: "0%" }}
-                    exit={{ y: "-100%" }}
-                    transition={{ duration: 0.5, ease: [0.4, 0, 0.2, 1] }}
-                    className="inline-block text-transparent bg-clip-text bg-gradient-to-r from-emerald-200 to-teal-400 absolute left-0">
-
-                    {words[wordIndex]}
-                  </motion.span>
-                </AnimatePresence>
-              </div>
+            {/* Headline */}
+            <h1 className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-serif text-forest leading-[1.1] mb-8 font-normal">
+              Where <br />
+              <span className="italic">Compassion</span> <br />
+              Meets Respect
             </h1>
-            
-            <p className="text-base sm:text-xl md:text-2xl text-emerald-50/90 mb-6 md:mb-10 leading-relaxed font-light max-w-2xl">
+
+            {/* Subtext */}
+            <p className="text-lg md:text-xl text-forest/80 mb-10 font-sans leading-relaxed max-w-md">
               Providing exceptional adult foster care in a warm, family-like environment. Because everyone deserves a place to truly call home.
             </p>
-            
-            <div className="flex flex-col sm:flex-row gap-5">
+
+            {/* CTAs */}
+            <div className="flex flex-col sm:flex-row gap-4">
               <Link to={createPageUrl('Contact')}>
-                <Button className="bg-emerald-500 hover:bg-emerald-600 text-white text-base md:text-lg px-6 md:px-10 py-5 md:py-7 rounded-full w-full sm:w-auto shadow-lg shadow-emerald-500/30 transition-all transform hover:-translate-y-1">
+                <Button className="bg-forest hover:bg-forest/90 text-white text-sm font-bold uppercase tracking-widest px-8 py-6 rounded-none w-full sm:w-auto transition-all group">
                   Schedule a Tour
+                  <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
                 </Button>
               </Link>
               <Link to={createPageUrl('Services')}>
-                <Button variant="outline" className="bg-white/10 backdrop-blur-sm border-white/30 text-white hover:bg-white hover:text-emerald-900 text-base md:text-lg px-6 md:px-10 py-5 md:py-7 rounded-full w-full sm:w-auto transition-all">
-                  Explore Services
+                <Button variant="outline" className="border-forest text-forest hover:bg-forest/5 text-sm font-bold uppercase tracking-widest px-8 py-6 rounded-none w-full sm:w-auto transition-all">
+                  Our Services
                 </Button>
               </Link>
             </div>
           </motion.div>
+        </div>
+
+        {/* Right Column: Visual */}
+        <div className="w-full md:w-1/2 relative min-h-[50vh] md:min-h-full">
+          <img
+            src="https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/6929d81f70c03236c5140dd7/c53344c5c_Adult-Foster-Care1-AdobeStock_224946364.jpg"
+            alt="Compassionate Caregiver"
+            className="absolute inset-0 w-full h-full object-cover"
+          />
+
+          {/* Status Bar */}
+          <div className="absolute bottom-0 left-0 right-0 bg-white/90 backdrop-blur-sm border-t border-forest/10 p-4 flex justify-between items-center text-xs font-sans font-bold uppercase tracking-widest text-forest/70 px-8">
+            <span>Lansing, MI</span>
+            <span>Est. 2024</span>
+          </div>
         </div>
       </section>
 
@@ -148,10 +150,10 @@ export default function Home() {
               <ParallaxSection offset={30} className="relative">
                 <div className="absolute -top-6 -left-6 w-32 h-32 bg-emerald-100 rounded-full opacity-50 blur-2xl"></div>
                 <img
-                src="https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/6929d81f70c03236c5140dd7/dcab800c8_Untitleddesign.png"
-                alt="Happy residents"
-                loading="lazy"
-                className="rounded-3xl shadow-2xl w-full object-cover h-[500px] relative z-10 transform hover:scale-[1.02] transition-transform duration-700" />
+                  src="https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/6929d81f70c03236c5140dd7/dcab800c8_Untitleddesign.png"
+                  alt="Happy residents"
+                  loading="lazy"
+                  className="rounded-3xl shadow-2xl w-full object-cover h-[500px] relative z-10 transform hover:scale-[1.02] transition-transform duration-700" />
 
                 <div className="absolute -bottom-8 -right-8 w-64 h-64 bg-teal-50 rounded-full -z-10 blur-3xl"></div>
               </ParallaxSection>
@@ -171,7 +173,7 @@ export default function Home() {
               <p className="text-lg text-slate-600 mb-8 leading-relaxed">
                 Our experienced staff delivers personalized care plans tailored to meet the unique needs of each individual in a clean, secure, and nurturing environment.
               </p>
-              
+
               <div className="grid grid-cols-2 gap-6 mb-8">
                 <div className="flex items-start gap-3">
                   <div className="p-2 bg-emerald-100 rounded-lg text-emerald-600">
@@ -218,7 +220,7 @@ export default function Home() {
 
           <StaggerContainer className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6" staggerDelay={0.1}>
             {features.map((feature, index) =>
-            <StaggerItem key={index}>
+              <StaggerItem key={index}>
                 <div className="bg-white p-8 rounded-2xl shadow-sm border border-slate-100 hover:shadow-xl hover:border-emerald-100 transition-all duration-300 group h-full">
                   <div className="w-14 h-14 bg-emerald-50 rounded-2xl flex items-center justify-center text-emerald-600 mb-6 group-hover:bg-emerald-600 group-hover:text-white transition-colors duration-300">
                     <feature.icon className="w-7 h-7" />
@@ -229,7 +231,7 @@ export default function Home() {
               </StaggerItem>
             )}
           </StaggerContainer>
-          
+
           <div className="mt-12 text-center">
             <Link to={createPageUrl('Services')}>
               <Button className="bg-emerald-900 text-white hover:bg-emerald-800 px-8 py-6 rounded-full text-lg">
@@ -269,23 +271,23 @@ export default function Home() {
               <p className="text-base sm:text-xl text-emerald-100/80 mb-6 md:mb-8 leading-relaxed font-light">
                 At Just AFC, we believe high-quality care transcends medical needs—it's about fostering belonging, dignity, and purpose. We provide a supportive environment where residents maintain independence while receiving the assistance they need.
               </p>
-              
+
               <div className="space-y-6">
                 {[
-                { title: "Personalized Attention", desc: "Low caregiver-to-resident ratios ensure individual focus." },
-                { title: "Holistic Approach", desc: "Focusing on mind, body, and spirit well-being." },
-                { title: "Community Integrated", desc: "Keeping residents connected to the world around them." }].
-                map((item, idx) =>
-                <div key={idx} className="flex gap-4">
-                    <div className="mt-1 w-12 h-12 bg-emerald-800 rounded-full flex items-center justify-center flex-shrink-0 border border-emerald-700">
-                      <CheckCircle2 className="w-6 h-6 text-emerald-400" />
+                  { title: "Personalized Attention", desc: "Low caregiver-to-resident ratios ensure individual focus." },
+                  { title: "Holistic Approach", desc: "Focusing on mind, body, and spirit well-being." },
+                  { title: "Community Integrated", desc: "Keeping residents connected to the world around them." }].
+                  map((item, idx) =>
+                    <div key={idx} className="flex gap-4">
+                      <div className="mt-1 w-12 h-12 bg-emerald-800 rounded-full flex items-center justify-center flex-shrink-0 border border-emerald-700">
+                        <CheckCircle2 className="w-6 h-6 text-emerald-400" />
+                      </div>
+                      <div>
+                        <h4 className="text-lg font-bold text-white">{item.title}</h4>
+                        <p className="text-emerald-200/70">{item.desc}</p>
+                      </div>
                     </div>
-                    <div>
-                      <h4 className="text-lg font-bold text-white">{item.title}</h4>
-                      <p className="text-emerald-200/70">{item.desc}</p>
-                    </div>
-                  </div>
-                )}
+                  )}
               </div>
             </SlideIn>
           </div>
@@ -308,7 +310,7 @@ export default function Home() {
                   </p>
                   <ul className="space-y-3 mb-8">
                     {['Wheelchair Accessible', 'Secure & Safe', 'Beautiful Outdoor Spaces'].map((item, i) =>
-                    <li key={i} className="flex items-center gap-2 text-slate-700">
+                      <li key={i} className="flex items-center gap-2 text-slate-700">
                         <CheckCircle2 className="w-5 h-5 text-emerald-600" /> {item}
                       </li>
                     )}
@@ -337,10 +339,10 @@ export default function Home() {
       {/* Contact / Footer CTA */}
       <section className="py-12 md:py-24 bg-emerald-900 relative overflow-hidden">
         <div className="absolute inset-0 opacity-20">
-           <div className="absolute -top-24 -left-24 w-96 h-96 bg-teal-500 rounded-full blur-3xl"></div>
-           <div className="absolute -bottom-24 -right-24 w-96 h-96 bg-emerald-500 rounded-full blur-3xl"></div>
+          <div className="absolute -top-24 -left-24 w-96 h-96 bg-teal-500 rounded-full blur-3xl"></div>
+          <div className="absolute -bottom-24 -right-24 w-96 h-96 bg-emerald-500 rounded-full blur-3xl"></div>
         </div>
-        
+
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
           <FadeIn>
             <h2 className="text-2xl sm:text-4xl md:text-6xl font-bold text-white mb-6 md:mb-8 tracking-tight">Ready to join our family?</h2>
@@ -359,9 +361,9 @@ export default function Home() {
                 </Button>
               </Link>
             </div>
-            
+
             <div className="mt-8 md:mt-12 flex flex-col sm:flex-row justify-center items-center gap-4 sm:gap-8 text-emerald-400/60 text-sm sm:text-base">
-               <div className="flex items-center gap-2"><Phone className="w-4 h-4" /> (517) 402-1891</div>
+              <div className="flex items-center gap-2"><Phone className="w-4 h-4" /> (517) 402-1891</div>
             </div>
           </FadeIn>
         </div>

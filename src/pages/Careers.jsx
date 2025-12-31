@@ -56,65 +56,57 @@ export default function Careers() {
   };
 
   return (
-    <div className="min-h-screen bg-stone-50">
-      <SEO 
+    <div className="min-h-screen bg-white">
+      <SEO
         title="Careers at Just AFC | Join Our Team"
         description="Interested in joining the Just AFC family? Send us a general inquiry. We are always looking for compassionate individuals."
       />
 
-      {/* Hero Section */}
-      <div className="relative bg-emerald-900 py-20 md:py-32 overflow-hidden">
-        <div className="absolute inset-0">
-          <img
-            src="https://images.unsplash.com/photo-1556761175-5973dc0f32e7?auto=format&fit=crop&q=80&w=2032"
-            alt="Background"
-            className="w-full h-full object-cover opacity-10 mix-blend-overlay"
-            fetchPriority="high"
-          />
-        </div>
-        <div className="absolute inset-0 bg-gradient-to-b from-emerald-900/90 via-emerald-900/80 to-stone-50"></div>
-        
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
+      {/* Hero Section - Editorial Style */}
+      <section className="relative bg-cream pt-32 pb-16 md:pt-48 md:pb-32 overflow-hidden border-b border-forest/10">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <FadeIn>
-            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-emerald-800/50 border border-emerald-700 text-emerald-300 text-sm font-medium mb-8 backdrop-blur-sm">
-              <Sparkles className="w-4 h-4 fill-emerald-300" />
-              <span>Join Our Team</span>
+            <div className="max-w-4xl">
+              <div className="inline-flex items-center gap-2 px-3 py-1 border border-forest/30 text-forest text-xs font-bold uppercase tracking-widest mb-6">
+                <Sparkles className="w-4 h-4 text-forest" />
+                <span>Join Our Team</span>
+              </div>
+              <h1 className="text-5xl sm:text-6xl md:text-8xl font-serif text-forest mb-8 leading-[1.1] font-normal">
+                Build a Career with <span className="italic">Purpose</span>
+              </h1>
+              <p className="text-lg md:text-xl text-forest/80 leading-relaxed font-sans max-w-2xl">
+                We are always looking for compassionate individuals who share our values and want to make a positive impact in the lives of our residents.
+              </p>
             </div>
-            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6 tracking-tight">
-              Build a Career with <span className="text-transparent bg-clip-text bg-gradient-to-r from-emerald-200 to-teal-400">Purpose</span>
-            </h1>
-            <p className="text-lg md:text-xl text-emerald-100/90 max-w-2xl mx-auto leading-relaxed font-light">
-              We are always looking for compassionate individuals who share our values and want to make a positive impact in the lives of our residents.
-            </p>
           </FadeIn>
         </div>
-      </div>
+      </section>
 
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 -mt-16 relative z-20 pb-24">
         {/* Content Section */}
         <FadeIn>
-          <div className="bg-white rounded-3xl shadow-2xl shadow-emerald-900/10 overflow-hidden border border-slate-100">
+          <div className="bg-cream border border-forest/10 overflow-hidden shadow-2xl shadow-forest/5">
             <div className="grid md:grid-cols-2">
               {/* Form Side */}
-              <div className="p-8 md:p-12 lg:p-16 flex flex-col justify-center order-2 md:order-1">
-                <h2 className="text-3xl font-bold text-emerald-950 mb-4">General Inquiry</h2>
-                <p className="text-slate-600 mb-8 text-lg leading-relaxed">
+              <div className="p-8 md:p-12 lg:p-16 flex flex-col justify-center order-2 md:order-1 border-t md:border-t-0 md:border-r border-forest/10">
+                <h2 className="text-3xl font-serif font-normal text-forest mb-4">General Inquiry</h2>
+                <p className="text-forest/70 mb-8 text-lg leading-relaxed font-sans">
                   Interested in working with us? Fill out the form below to get in touch. We'd love to hear from you.
                 </p>
-                
+
                 {isSubmitted ? (
-                  <div className="bg-emerald-50 p-8 rounded-2xl text-center animate-in fade-in zoom-in">
-                    <div className="w-16 h-16 bg-emerald-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                      <CheckCircle className="w-8 h-8 text-emerald-600" />
+                  <div className="bg-white p-8 border border-forest/10 text-center animate-in fade-in zoom-in">
+                    <div className="w-16 h-16 bg-forest/5 flex items-center justify-center mx-auto mb-4">
+                      <CheckCircle className="w-8 h-8 text-forest" />
                     </div>
-                    <h3 className="text-xl font-bold text-emerald-900 mb-2">Message Sent!</h3>
-                    <p className="text-slate-600 mb-6">
+                    <h3 className="text-xl font-bold text-forest mb-2">Message Sent!</h3>
+                    <p className="text-forest/70 mb-6">
                       Thanks for reaching out. We'll be in touch shortly.
                     </p>
-                    <Button 
+                    <Button
                       onClick={() => setIsSubmitted(false)}
                       variant="outline"
-                      className="border-emerald-200 text-emerald-700 hover:bg-emerald-50"
+                      className="border-forest text-forest hover:bg-forest/5 rounded-none uppercase tracking-widest text-xs font-bold"
                     >
                       Send Another Message
                     </Button>
@@ -122,54 +114,54 @@ export default function Careers() {
                 ) : (
                   <form onSubmit={handleSubmit} className="space-y-5">
                     <div className="space-y-2">
-                      <label className="text-sm font-semibold text-emerald-900">Full Name</label>
-                      <Input 
+                      <label className="text-xs font-bold uppercase tracking-widest text-forest">Full Name</label>
+                      <Input
                         required
                         value={formData.full_name}
-                        onChange={(e) => setFormData({...formData, full_name: e.target.value})}
+                        onChange={(e) => setFormData({ ...formData, full_name: e.target.value })}
                         placeholder="Jane Smith"
-                        className="bg-slate-50 border-slate-200 focus:bg-white"
+                        className="bg-white border-forest/20 focus:border-forest rounded-none h-12"
                       />
                     </div>
                     <div className="space-y-2">
-                      <label className="text-sm font-semibold text-emerald-900">Email Address</label>
-                      <Input 
+                      <label className="text-xs font-bold uppercase tracking-widest text-forest">Email Address</label>
+                      <Input
                         type="email"
                         required
                         value={formData.email}
-                        onChange={(e) => setFormData({...formData, email: e.target.value})}
+                        onChange={(e) => setFormData({ ...formData, email: e.target.value })}
                         placeholder="email@example.com"
-                        className="bg-slate-50 border-slate-200 focus:bg-white"
+                        className="bg-white border-forest/20 focus:border-forest rounded-none h-12"
                       />
                     </div>
                     <div className="space-y-2">
-                      <label className="text-sm font-semibold text-emerald-900">Phone Number</label>
-                      <Input 
+                      <label className="text-xs font-bold uppercase tracking-widest text-forest">Phone Number</label>
+                      <Input
                         value={formData.phone}
-                        onChange={(e) => setFormData({...formData, phone: e.target.value})}
+                        onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
                         placeholder="(555) 123-4567"
-                        className="bg-slate-50 border-slate-200 focus:bg-white"
+                        className="bg-white border-forest/20 focus:border-forest rounded-none h-12"
                       />
                     </div>
                     <div className="space-y-2">
-                      <label className="text-sm font-semibold text-emerald-900">Message</label>
-                      <Textarea 
+                      <label className="text-xs font-bold uppercase tracking-widest text-forest">Message</label>
+                      <Textarea
                         required
                         value={formData.message}
-                        onChange={(e) => setFormData({...formData, message: e.target.value})}
+                        onChange={(e) => setFormData({ ...formData, message: e.target.value })}
                         placeholder="Tell us a bit about yourself..."
-                        className="min-h-[120px] bg-slate-50 border-slate-200 focus:bg-white"
+                        className="min-h-[120px] bg-white border-forest/20 focus:border-forest rounded-none p-4"
                       />
                     </div>
 
-                    <Button 
-                      type="submit" 
-                      className="w-full bg-emerald-700 hover:bg-emerald-800 text-white py-6 text-lg rounded-xl shadow-lg shadow-emerald-900/10 transition-all mt-4"
+                    <Button
+                      type="submit"
+                      className="w-full bg-forest hover:bg-forest/90 text-white h-14 text-sm font-bold uppercase tracking-widest rounded-none shadow-none mt-4"
                       disabled={submitMutation.isPending}
                     >
                       {submitMutation.isPending ? (
                         <>
-                          <Loader2 className="w-5 h-5 mr-2 animate-spin" /> Sending...
+                          <Loader2 className="w-4 h-4 mr-2 animate-spin" /> Sending...
                         </>
                       ) : (
                         <>
@@ -180,19 +172,19 @@ export default function Careers() {
                   </form>
                 )}
               </div>
-              
+
               {/* Image Side */}
               <div className="relative h-64 md:h-auto order-1 md:order-2 bg-emerald-100">
-                <img 
-                  src="https://images.unsplash.com/photo-1521737711867-e3b97375f902?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80" 
-                  alt="Team collaboration" 
+                <img
+                  src="https://images.unsplash.com/photo-1521737711867-e3b97375f902?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80"
+                  alt="Team collaboration"
                   loading="lazy"
-                  className="absolute inset-0 w-full h-full object-cover mix-blend-multiply opacity-90"
+                  className="absolute inset-0 w-full h-full object-cover grayscale opacity-90"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-emerald-900/60 to-transparent"></div>
-                <div className="absolute bottom-0 left-0 p-8 text-white">
-                  <p className="font-serif italic text-2xl">"Caring is the essence of nursing."</p>
-                  <p className="text-emerald-100 text-sm mt-2">— Jean Watson</p>
+                <div className="absolute inset-0 bg-forest/20 mix-blend-multiply"></div>
+                <div className="absolute bottom-0 left-0 p-8 text-white z-10">
+                  <p className="font-serif italic text-2xl md:text-3xl leading-tight">"Caring is the essence of nursing."</p>
+                  <p className="text-white/80 text-sm mt-4 font-sans uppercase tracking-widest">— Jean Watson</p>
                 </div>
               </div>
             </div>

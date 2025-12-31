@@ -13,11 +13,11 @@ export default function Layout({ children }) {
   }, [location.pathname]);
 
   const navigation = [
-  { name: 'Home', href: 'Home' },
-  { name: 'About Us', href: 'About' },
-  { name: 'Services', href: 'Services' },
-  { name: 'Careers', href: 'Careers' },
-  { name: 'Contact', href: 'Contact' }];
+    { name: 'Home', href: 'Home' },
+    { name: 'About Us', href: 'About' },
+    { name: 'Services', href: 'Services' },
+    { name: 'Careers', href: 'Careers' },
+    { name: 'Contact', href: 'Contact' }];
 
 
   const isActive = (path) => {
@@ -26,56 +26,38 @@ export default function Layout({ children }) {
 
   return (
     <div className="min-h-screen flex flex-col bg-stone-50 font-sans text-slate-800">
-      {/* Top Bar */}
-      <div className="bg-emerald-900 text-white py-2 px-4 text-sm">
-        <div className="container mx-auto flex justify-center items-center">
-          <div className="flex flex-wrap justify-center items-center gap-x-4 gap-y-1">
-            <span className="flex items-center gap-2"><Phone className="w-4 h-4 text-emerald-400" /> (517) 402-1891</span>
-            <span className="hidden sm:inline text-emerald-200">|</span>
-            <span className="flex items-center gap-2 bg-emerald-800/50 px-2 py-0.5 rounded-full border border-emerald-700/50 animate-pulse">
-              <span className="w-2 h-2 rounded-full bg-green-400"></span>
-              <span className="text-green-100 font-semibold text-xs">Rooms Available</span>
-            </span>
-            <span className="hidden sm:inline text-emerald-200">|</span>
-            <span className="text-emerald-100 font-medium">Now Serving Central and West Michigan!</span>
-          </div>
-        </div>
-      </div>
-
       {/* Header */}
-      <header className="bg-white shadow-sm sticky top-0 z-50">
+      <header className="bg-white sticky top-0 z-50 border-b border-[rgba(10,34,24,0.15)]">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex justify-between h-20">
+          <div className="flex justify-between items-center h-20">
             {/* Logo */}
             <div className="flex-shrink-0 flex items-center">
               <Link to={createPageUrl('Home')} className="flex items-center gap-2 group">
-                <div className="bg-emerald-100 p-2 rounded-lg group-hover:bg-emerald-200 transition-colors">
-                  <Heart className="w-8 h-8 text-emerald-700 fill-emerald-700" />
+                <div className="bg-transparent p-0">
+                  <Heart className="w-6 h-6 text-forest fill-forest" />
                 </div>
                 <div className="flex flex-col">
-                  <span className="text-2xl font-bold text-emerald-900 tracking-tight leading-none">JUST AFC</span>
-                  <span className="text-xs font-medium text-emerald-600 tracking-widest uppercase">Adult Foster Care</span>
+                  <span className="text-xl font-serif tracking-tight text-forest">JUST AFC</span>
                 </div>
               </Link>
             </div>
 
-            {/* Desktop Navigation */}
+            {/* Desktop Navigation - Minimal/Utility Style */}
             <div className="hidden md:flex items-center space-x-8">
               {navigation.map((item) =>
-              <Link
-                key={item.name}
-                to={createPageUrl(item.href)}
-                className={`text-sm font-medium transition-colors ${
-                isActive(item.href) ?
-                'text-emerald-700 font-semibold' :
-                'text-slate-600 hover:text-emerald-600'}`
-                }>
+                <Link
+                  key={item.name}
+                  to={createPageUrl(item.href)}
+                  className={`text-xs font-sans font-bold uppercase tracking-widest transition-colors ${isActive(item.href) ?
+                      'text-forest' :
+                      'text-slate-500 hover:text-forest'}`
+                  }>
 
                   {item.name}
                 </Link>
               )}
               <Link to={createPageUrl('Referrals')}>
-                <Button className="bg-emerald-700 hover:bg-emerald-800 text-white shadow-lg hover:shadow-xl transition-all transform hover:-translate-y-0.5">
+                <Button className="bg-forest hover:bg-forest/90 text-white rounded-none uppercase tracking-widest text-xs font-bold px-6 py-5 shadow-none transition-all">
                   Refer a Patient
                 </Button>
               </Link>
@@ -85,7 +67,7 @@ export default function Layout({ children }) {
             <div className="md:hidden flex items-center">
               <button
                 onClick={() => setIsMenuOpen(!isMenuOpen)}
-                className="text-slate-600 hover:text-emerald-700 focus:outline-none">
+                className="text-forest hover:text-forest/80 focus:outline-none">
 
                 {isMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
               </button>
@@ -95,25 +77,24 @@ export default function Layout({ children }) {
 
         {/* Mobile Navigation */}
         {isMenuOpen &&
-        <div className="md:hidden bg-white border-t border-gray-100 absolute w-full shadow-lg">
+          <div className="md:hidden bg-white border-b border-[rgba(10,34,24,0.15)] absolute w-full shadow-lg">
             <div className="px-4 pt-2 pb-6 space-y-2">
               {navigation.map((item) =>
-            <Link
-              key={item.name}
-              to={createPageUrl(item.href)}
-              className={`block px-3 py-3 rounded-md text-base font-medium ${
-              isActive(item.href) ?
-              'bg-emerald-50 text-emerald-700' :
-              'text-slate-600 hover:bg-gray-50 hover:text-emerald-600'}`
-              }
-              onClick={() => setIsMenuOpen(false)}>
+                <Link
+                  key={item.name}
+                  to={createPageUrl(item.href)}
+                  className={`block px-3 py-3 text-sm font-sans font-bold uppercase tracking-widest ${isActive(item.href) ?
+                      'text-forest bg-cream' :
+                      'text-slate-500 hover:text-forest hover:bg-cream'}`
+                  }
+                  onClick={() => setIsMenuOpen(false)}>
 
                   {item.name}
                 </Link>
-            )}
+              )}
               <div className="pt-4">
                 <Link to={createPageUrl('Referrals')} onClick={() => setIsMenuOpen(false)}>
-                  <Button className="w-full bg-emerald-700 hover:bg-emerald-800 text-white">
+                  <Button className="w-full bg-forest text-white rounded-none uppercase tracking-widest text-xs font-bold py-6">
                     Refer a Patient
                   </Button>
                 </Link>

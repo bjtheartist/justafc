@@ -59,8 +59,18 @@ module.exports = {
   				'accent-foreground': 'hsl(var(--sidebar-accent-foreground))',
   				border: 'hsl(var(--sidebar-border))',
   				ring: 'hsl(var(--sidebar-ring))'
-  			}
+  			},
+            cream: '#F9F9F7',
+            forest: {
+                DEFAULT: '#0A2218',
+                light: 'rgba(10, 34, 24, 0.15)', // For borders/lines
+            },
+            sage: '#4A7A68',
   		},
+        fontFamily: {
+            serif: ['"Playfair Display"', 'serif'],
+            sans: ['Inter', 'sans-serif'],
+        },
   		keyframes: {
   			'accordion-down': {
   				from: {
