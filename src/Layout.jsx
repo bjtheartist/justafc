@@ -110,16 +110,16 @@ export default function Layout({ children }) {
       </main>
 
       {/* Footer */}
-      <footer className="bg-[#013220] text-white pt-12 pb-8 md:pt-20 md:pb-10">
+      <footer className="bg-forest text-white pt-12 pb-8 md:pt-20 md:pb-10">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 md:gap-12 mb-8 md:mb-16">
             {/* Brand Column */}
             <div>
               <div className="flex items-center gap-2 mb-6">
-                <Heart className="w-6 h-6 text-emerald-400 fill-emerald-400" />
+                <Heart className="w-6 h-6 text-sage fill-sage" />
                 <span className="text-xl font-bold tracking-wide">JUST AFC</span>
               </div>
-              <p className="text-gray-300 leading-relaxed pr-4">
+              <p className="text-cream/70 leading-relaxed pr-4">
                 Providing compassionate, dignified, and personalized adult foster care services. Your family is our family.
               </p>
             </div>
@@ -127,20 +127,20 @@ export default function Layout({ children }) {
             {/* Quick Links */}
             <div>
               <h3 className="font-bold text-lg mb-6">Quick Links</h3>
-              <ul className="space-y-4 text-gray-300">
-                <li><Link to={createPageUrl('Home')} className="hover:text-emerald-400 transition-colors">Home</Link></li>
-                <li><Link to={createPageUrl('About')} className="hover:text-emerald-400 transition-colors">About Us</Link></li>
-                <li><Link to={createPageUrl('Services')} className="hover:text-emerald-400 transition-colors">Services</Link></li>
-                <li><Link to={createPageUrl('Contact')} className="hover:text-emerald-400 transition-colors">Contact</Link></li>
-                <li><Link to={createPageUrl('Careers')} className="hover:text-emerald-400 transition-colors">Careers</Link></li>
-                <li><Link to={createPageUrl('Referrals')} className="hover:text-emerald-400 transition-colors">Referral Center</Link></li>
+              <ul className="space-y-4 text-cream/70">
+                <li><Link to={createPageUrl('Home')} className="hover:text-sage transition-colors">Home</Link></li>
+                <li><Link to={createPageUrl('About')} className="hover:text-sage transition-colors">About Us</Link></li>
+                <li><Link to={createPageUrl('Services')} className="hover:text-sage transition-colors">Services</Link></li>
+                <li><Link to={createPageUrl('Contact')} className="hover:text-sage transition-colors">Contact</Link></li>
+                <li><Link to={createPageUrl('Careers')} className="hover:text-sage transition-colors">Careers</Link></li>
+                <li><Link to={createPageUrl('Referrals')} className="hover:text-sage transition-colors">Referral Center</Link></li>
               </ul>
             </div>
 
             {/* Our Services */}
             <div>
               <h3 className="font-bold text-lg mb-6">Our Services</h3>
-              <ul className="space-y-4 text-gray-300">
+              <ul className="space-y-4 text-cream/70">
                 <li>Adult Foster Care</li>
                 <li>Medication Management</li>
                 <li>Laundry</li>
@@ -155,24 +155,24 @@ export default function Layout({ children }) {
             {/* Contact Us */}
             <div>
               <h3 className="font-bold text-lg mb-6">Contact Us</h3>
-              <ul className="space-y-6 text-gray-300">
+              <ul className="space-y-6 text-cream/70">
                 <li className="flex items-start gap-4">
-                  <MapPin className="w-6 h-6 text-emerald-400 flex-shrink-0 mt-0.5" />
+                  <MapPin className="w-6 h-6 text-sage flex-shrink-0 mt-0.5" />
                   <span>1416 N MLK Blvd,<br />Lansing, MI 48915</span>
                 </li>
                 <li className="flex items-center gap-4">
-                  <Phone className="w-6 h-6 text-emerald-400 flex-shrink-0" />
+                  <Phone className="w-6 h-6 text-sage flex-shrink-0" />
                   <span>(517) 402-1891</span>
                 </li>
               </ul>
             </div>
           </div>
 
-          <div className="border-t border-emerald-900/50 pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-emerald-400/60">
+          <div className="border-t border-sage/30 pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-sage/80">
             <p>&copy; 2025 Just AFC Inc. All rights reserved.</p>
             <div className="flex gap-8">
-              <a href="#" className="hover:text-emerald-400 transition-colors">Privacy Policy</a>
-              <a href="#" className="hover:text-emerald-400 transition-colors">Terms of Service</a>
+              <a href="#" className="hover:text-sage transition-colors">Privacy Policy</a>
+              <a href="#" className="hover:text-sage transition-colors">Terms of Service</a>
             </div>
           </div>
         </div>

@@ -143,24 +143,24 @@ export default function Home() {
 
       {/* Welcome / About Teaser */}
       <section className="py-12 md:py-24 bg-white relative overflow-hidden">
-        <div className="absolute top-0 right-0 w-1/3 h-full bg-gradient-to-l from-emerald-50 to-transparent -z-10"></div>
+        <div className="absolute top-0 right-0 w-1/3 h-full bg-gradient-to-l from-cream to-transparent -z-10"></div>
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-16 items-center">
             <SlideIn direction="left">
               <ParallaxSection offset={30} className="relative">
-                <div className="absolute -top-6 -left-6 w-32 h-32 bg-emerald-100 rounded-full opacity-50 blur-2xl"></div>
+                <div className="absolute -top-6 -left-6 w-32 h-32 bg-sage/20 rounded-full opacity-50 blur-2xl"></div>
                 <img
                   src="https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/6929d81f70c03236c5140dd7/dcab800c8_Untitleddesign.png"
                   alt="Happy residents"
                   loading="lazy"
                   className="rounded-3xl shadow-2xl w-full object-cover h-[500px] relative z-10 transform hover:scale-[1.02] transition-transform duration-700" />
 
-                <div className="absolute -bottom-8 -right-8 w-64 h-64 bg-teal-50 rounded-full -z-10 blur-3xl"></div>
+                <div className="absolute -bottom-8 -right-8 w-64 h-64 bg-sage/10 rounded-full -z-10 blur-3xl"></div>
               </ParallaxSection>
             </SlideIn>
 
             <SlideIn direction="right">
-              <div className="inline-flex items-center gap-2 text-emerald-600 font-bold uppercase tracking-widest text-sm mb-4">
+              <div className="inline-flex items-center gap-2 text-sage font-bold uppercase tracking-widest text-sm mb-4">
                 <Heart className="w-5 h-5" />
                 <span>Welcome to Just AFC</span>
               </div>
@@ -168,7 +168,7 @@ export default function Home() {
                 A Sanctuary of Care & Comfort
               </h2>
               <p className="text-lg text-slate-600 mb-6 leading-relaxed">
-                Just AFC is a premier adult foster care sanctuary dedicated to providing exceptional care. We specialize in comprehensive, <strong className="text-emerald-700">long-term</strong>, <strong className="text-emerald-700">short stays</strong>, <strong className="text-emerald-700">respite care</strong>, and supportive housing.
+                Just AFC is a premier adult foster care sanctuary dedicated to providing exceptional care. We specialize in comprehensive, <strong className="text-forest">long-term</strong>, <strong className="text-forest">short stays</strong>, <strong className="text-forest">respite care</strong>, and supportive housing.
               </p>
               <p className="text-lg text-slate-600 mb-8 leading-relaxed">
                 Our experienced staff delivers personalized care plans tailored to meet the unique needs of each individual in a clean, secure, and nurturing environment.
@@ -176,27 +176,27 @@ export default function Home() {
 
               <div className="grid grid-cols-2 gap-6 mb-8">
                 <div className="flex items-start gap-3">
-                  <div className="p-2 bg-emerald-100 rounded-lg text-emerald-600">
+                  <div className="p-2 bg-sage/20 rounded-lg text-sage">
                     <UserCheck className="w-6 h-6" />
                   </div>
                   <div>
-                    <h4 className="font-bold text-slate-900">Expert Staff</h4>
-                    <p className="text-sm text-slate-500">Trained professionals</p>
+                    <h4 className="font-bold text-forest">Expert Staff</h4>
+                    <p className="text-sm text-forest/60">Trained professionals</p>
                   </div>
                 </div>
                 <div className="flex items-start gap-3">
-                  <div className="p-2 bg-emerald-100 rounded-lg text-emerald-600">
+                  <div className="p-2 bg-sage/20 rounded-lg text-sage">
                     <HomeIcon className="w-6 h-6" />
                   </div>
                   <div>
-                    <h4 className="font-bold text-slate-900">Homelike</h4>
-                    <p className="text-sm text-slate-500">Warm atmosphere</p>
+                    <h4 className="font-bold text-forest">Homelike</h4>
+                    <p className="text-sm text-forest/60">Warm atmosphere</p>
                   </div>
                 </div>
               </div>
 
               <Link to={createPageUrl('About')}>
-                <Button variant="outline" className="border-emerald-200 text-emerald-700 hover:bg-emerald-50 hover:text-emerald-800 group">
+                <Button variant="outline" className="border-sage/30 text-sage hover:bg-sage/5 hover:text-forest group">
                   Learn More About Us <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
                 </Button>
               </Link>
@@ -206,27 +206,27 @@ export default function Home() {
       </section>
 
       {/* Services Preview */}
-      <section className="py-12 md:py-24 bg-stone-50">
+      <section className="py-12 md:py-24 bg-cream">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center max-w-3xl mx-auto mb-16">
             <FadeIn>
-              <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-100 text-emerald-700 text-xs font-bold uppercase tracking-wider mb-4">
+              <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-sage/20 text-forest text-xs font-bold uppercase tracking-wider mb-4">
                 <Sparkles className="w-4 h-4" /> Our Expertise
               </div>
-              <h2 className="text-2xl sm:text-3xl md:text-5xl font-bold text-slate-900 mb-4">Comprehensive Care Services</h2>
-              <p className="text-slate-600 text-lg">Everything your loved one needs to live with dignity and comfort.</p>
+              <h2 className="text-2xl sm:text-3xl md:text-5xl font-bold text-forest mb-4">Comprehensive Care Services</h2>
+              <p className="text-forest/70 text-lg">Everything your loved one needs to live with dignity and comfort.</p>
             </FadeIn>
           </div>
 
           <StaggerContainer className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6" staggerDelay={0.1}>
             {features.map((feature, index) =>
               <StaggerItem key={index}>
-                <div className="bg-white p-8 rounded-2xl shadow-sm border border-slate-100 hover:shadow-xl hover:border-emerald-100 transition-all duration-300 group h-full">
-                  <div className="w-14 h-14 bg-emerald-50 rounded-2xl flex items-center justify-center text-emerald-600 mb-6 group-hover:bg-emerald-600 group-hover:text-white transition-colors duration-300">
+                <div className="bg-white p-8 rounded-2xl shadow-sm border border-forest/10 hover:shadow-xl hover:border-sage/30 transition-all duration-300 group h-full">
+                  <div className="w-14 h-14 bg-sage/10 rounded-2xl flex items-center justify-center text-sage mb-6 group-hover:bg-forest group-hover:text-white transition-colors duration-300">
                     <feature.icon className="w-7 h-7" />
                   </div>
-                  <h3 className="text-xl font-bold text-slate-900 mb-3 group-hover:text-emerald-700 transition-colors">{feature.title}</h3>
-                  <p className="text-slate-600 text-sm leading-relaxed">{feature.description}</p>
+                  <h3 className="text-xl font-bold text-forest mb-3 group-hover:text-sage transition-colors">{feature.title}</h3>
+                  <p className="text-forest/70 text-sm leading-relaxed">{feature.description}</p>
                 </div>
               </StaggerItem>
             )}
@@ -234,7 +234,7 @@ export default function Home() {
 
           <div className="mt-12 text-center">
             <Link to={createPageUrl('Services')}>
-              <Button className="bg-emerald-900 text-white hover:bg-emerald-800 px-8 py-6 rounded-full text-lg">
+              <Button className="bg-forest text-white hover:bg-forest/90 px-8 py-6 rounded-full text-lg">
                 View All Services
               </Button>
             </Link>
@@ -243,16 +243,16 @@ export default function Home() {
       </section>
 
       {/* Philosophy / Why Choose Us */}
-      <section className="py-12 md:py-24 bg-emerald-950 text-white relative overflow-hidden">
+      <section className="py-12 md:py-24 bg-forest text-white relative overflow-hidden">
         {/* Animated Background Pattern */}
         <div className="absolute inset-0 opacity-10" style={{ backgroundImage: 'radial-gradient(#fff 1px, transparent 1px)', backgroundSize: '40px 40px' }}></div>
-        <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-b from-transparent via-emerald-900/20 to-emerald-950"></div>
+        <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-b from-transparent via-forest/20 to-forest"></div>
 
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="grid lg:grid-cols-2 gap-16 items-center">
             <SlideIn direction="right" className="order-2 lg:order-2">
               <ParallaxSection offset={40} className="relative">
-                <div className="absolute inset-0 bg-gradient-to-tr from-emerald-500/20 to-teal-500/20 rounded-3xl transform rotate-6"></div>
+                <div className="absolute inset-0 bg-gradient-to-tr from-sage/20 to-sage/10 rounded-3xl transform rotate-6"></div>
                 <img
                   src="https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/6929d81f70c03236c5140dd7/1c939d70a_image.png"
                   alt="Caring touch"
@@ -263,12 +263,12 @@ export default function Home() {
             </SlideIn>
 
             <SlideIn direction="left" className="order-1 lg:order-1">
-              <h2 className="text-emerald-400 font-bold tracking-widest uppercase mb-4">Our Philosophy</h2>
+              <h2 className="text-sage font-bold tracking-widest uppercase mb-4">Our Philosophy</h2>
               <h3 className="text-2xl sm:text-4xl md:text-6xl font-bold mb-6 md:mb-8 leading-none">
                 More Than Care. <br />
-                <span className="text-transparent bg-clip-text bg-gradient-to-r from-emerald-200 to-teal-200">It's Family.</span>
+                <span className="text-transparent bg-clip-text bg-gradient-to-r from-cream to-sage">It's Family.</span>
               </h3>
-              <p className="text-base sm:text-xl text-emerald-100/80 mb-6 md:mb-8 leading-relaxed font-light">
+              <p className="text-base sm:text-xl text-cream/80 mb-6 md:mb-8 leading-relaxed font-light">
                 At Just AFC, we believe high-quality care transcends medical needs—it's about fostering belonging, dignity, and purpose. We provide a supportive environment where residents maintain independence while receiving the assistance they need.
               </p>
 
@@ -279,12 +279,12 @@ export default function Home() {
                   { title: "Community Integrated", desc: "Keeping residents connected to the world around them." }].
                   map((item, idx) =>
                     <div key={idx} className="flex gap-4">
-                      <div className="mt-1 w-12 h-12 bg-emerald-800 rounded-full flex items-center justify-center flex-shrink-0 border border-emerald-700">
-                        <CheckCircle2 className="w-6 h-6 text-emerald-400" />
+                      <div className="mt-1 w-12 h-12 bg-sage/30 rounded-full flex items-center justify-center flex-shrink-0 border border-sage/50">
+                        <CheckCircle2 className="w-6 h-6 text-sage" />
                       </div>
                       <div>
                         <h4 className="text-lg font-bold text-white">{item.title}</h4>
-                        <p className="text-emerald-200/70">{item.desc}</p>
+                        <p className="text-cream/70">{item.desc}</p>
                       </div>
                     </div>
                   )}
@@ -298,31 +298,31 @@ export default function Home() {
       <section className="py-12 md:py-24 bg-white">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <ScaleIn>
-            <div className="bg-stone-50 rounded-2xl md:rounded-[3rem] p-6 md:p-16 relative overflow-hidden">
+            <div className="bg-cream rounded-2xl md:rounded-[3rem] p-6 md:p-16 relative overflow-hidden">
               {/* Decorative Circle */}
-              <div className="absolute top-0 right-0 w-64 h-64 bg-emerald-100/50 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2"></div>
+              <div className="absolute top-0 right-0 w-64 h-64 bg-sage/20 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2"></div>
 
               <div className="grid lg:grid-cols-2 gap-12 items-center relative z-10">
                 <div>
-                  <h2 className="text-2xl sm:text-3xl md:text-5xl font-bold text-emerald-950 mb-4 md:mb-6">Visit Our Beautiful Home</h2>
-                  <p className="text-lg text-slate-600 mb-8 leading-relaxed">
+                  <h2 className="text-2xl sm:text-3xl md:text-5xl font-bold text-forest mb-4 md:mb-6">Visit Our Beautiful Home</h2>
+                  <p className="text-lg text-forest/70 mb-8 leading-relaxed">
                     Experience the warmth and comfort of our facilities firsthand. Located at <strong>1416 N MLK Blvd, Lansing, MI 48915</strong>, our home is fully accessible and designed for your loved one's comfort.
                   </p>
                   <ul className="space-y-3 mb-8">
                     {['Wheelchair Accessible', 'Secure & Safe', 'Beautiful Outdoor Spaces'].map((item, i) =>
-                      <li key={i} className="flex items-center gap-2 text-slate-700">
-                        <CheckCircle2 className="w-5 h-5 text-emerald-600" /> {item}
+                      <li key={i} className="flex items-center gap-2 text-forest/80">
+                        <CheckCircle2 className="w-5 h-5 text-sage" /> {item}
                       </li>
                     )}
                   </ul>
                   <Link to={createPageUrl('Contact')}>
-                    <Button className="bg-emerald-600 hover:bg-emerald-700 text-white h-14 px-8 rounded-full text-lg shadow-lg shadow-emerald-600/20">
+                    <Button className="bg-forest hover:bg-forest/90 text-white h-14 px-8 rounded-full text-lg shadow-lg shadow-forest/20">
                       Schedule Your Visit
                     </Button>
                   </Link>
                 </div>
                 <ParallaxSection offset={-30} className="relative group">
-                  <div className="absolute inset-0 bg-emerald-900 rounded-2xl rotate-2 group-hover:rotate-1 transition-transform"></div>
+                  <div className="absolute inset-0 bg-forest rounded-2xl rotate-2 group-hover:rotate-1 transition-transform"></div>
                   <img
                     src="https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/6929d81f70c03236c5140dd7/db6024d64_1416NMLKBlvdJustAFChome.png"
                     alt="Our Home"
@@ -337,32 +337,32 @@ export default function Home() {
       </section>
 
       {/* Contact / Footer CTA */}
-      <section className="py-12 md:py-24 bg-emerald-900 relative overflow-hidden">
+      <section className="py-12 md:py-24 bg-forest relative overflow-hidden">
         <div className="absolute inset-0 opacity-20">
-          <div className="absolute -top-24 -left-24 w-96 h-96 bg-teal-500 rounded-full blur-3xl"></div>
-          <div className="absolute -bottom-24 -right-24 w-96 h-96 bg-emerald-500 rounded-full blur-3xl"></div>
+          <div className="absolute -top-24 -left-24 w-96 h-96 bg-sage rounded-full blur-3xl"></div>
+          <div className="absolute -bottom-24 -right-24 w-96 h-96 bg-sage rounded-full blur-3xl"></div>
         </div>
 
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
           <FadeIn>
             <h2 className="text-2xl sm:text-4xl md:text-6xl font-bold text-white mb-6 md:mb-8 tracking-tight">Ready to join our family?</h2>
-            <p className="text-emerald-100 text-base sm:text-xl max-w-2xl mx-auto mb-8 md:mb-12 font-light">
+            <p className="text-cream/90 text-base sm:text-xl max-w-2xl mx-auto mb-8 md:mb-12 font-light">
               We invite you to tour our homes, meet our dedicated caregivers, and see firsthand why families trust Just AFC with their loved ones.
             </p>
             <div className="flex flex-col sm:flex-row justify-center gap-6">
               <Link to={createPageUrl('Contact')}>
-                <Button className="bg-white text-emerald-950 hover:bg-emerald-50 text-base md:text-lg px-6 md:px-10 py-5 md:py-8 rounded-full w-full sm:w-auto shadow-2xl font-bold transform hover:-translate-y-1 transition-all">
+                <Button className="bg-white text-forest hover:bg-cream text-base md:text-lg px-6 md:px-10 py-5 md:py-8 rounded-full w-full sm:w-auto shadow-2xl font-bold transform hover:-translate-y-1 transition-all">
                   Get in Touch
                 </Button>
               </Link>
               <Link to={createPageUrl('Referrals')}>
-                <Button variant="outline" className="bg-transparent border-2 border-white text-white hover:bg-white hover:text-emerald-950 text-base md:text-lg px-6 md:px-10 py-5 md:py-8 rounded-full w-full sm:w-auto transition-all font-bold">
+                <Button variant="outline" className="bg-transparent border-2 border-white text-white hover:bg-white hover:text-forest text-base md:text-lg px-6 md:px-10 py-5 md:py-8 rounded-full w-full sm:w-auto transition-all font-bold">
                   Refer a Patient
                 </Button>
               </Link>
             </div>
 
-            <div className="mt-8 md:mt-12 flex flex-col sm:flex-row justify-center items-center gap-4 sm:gap-8 text-emerald-400/60 text-sm sm:text-base">
+            <div className="mt-8 md:mt-12 flex flex-col sm:flex-row justify-center items-center gap-4 sm:gap-8 text-sage text-sm sm:text-base">
               <div className="flex items-center gap-2"><Phone className="w-4 h-4" /> (517) 402-1891</div>
             </div>
           </FadeIn>

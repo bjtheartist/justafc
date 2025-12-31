@@ -53,10 +53,10 @@ export default function ContactForm({ className }) {
 
   if (isSubmitted) {
     return (
-      <div className={`bg-emerald-50 border border-emerald-100 rounded-lg p-8 text-center animate-in fade-in zoom-in duration-300 ${className}`}>
-        <CheckCircle className="w-16 h-16 text-emerald-500 mx-auto mb-4" />
-        <h3 className="text-xl font-bold text-emerald-900 mb-2">Message Sent!</h3>
-        <p className="text-emerald-700">
+      <div className={`bg-sage/10 border border-sage/20 rounded-lg p-8 text-center animate-in fade-in zoom-in duration-300 ${className}`}>
+        <CheckCircle className="w-16 h-16 text-sage mx-auto mb-4" />
+        <h3 className="text-xl font-bold text-forest mb-2">Message Sent!</h3>
+        <p className="text-forest/80">
           Thank you for contacting us. We will get back to you as soon as possible.
         </p>
         <Button
@@ -74,7 +74,7 @@ export default function ContactForm({ className }) {
     <form onSubmit={handleSubmit} className={`space-y-4 ${className}`}>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
         <div className="space-y-2">
-          <label htmlFor="name" className="text-sm font-medium text-slate-700">Your Name</label>
+          <label htmlFor="name" className="text-sm font-medium text-forest">Your Name</label>
           <Input
             id="name"
             required
@@ -84,7 +84,7 @@ export default function ContactForm({ className }) {
           />
         </div>
         <div className="space-y-2">
-          <label htmlFor="phone" className="text-sm font-medium text-slate-700">Phone Number</label>
+          <label htmlFor="phone" className="text-sm font-medium text-forest">Phone Number</label>
           <Input
             id="phone"
             value={formData.phone}
@@ -95,7 +95,7 @@ export default function ContactForm({ className }) {
       </div>
 
       <div className="space-y-2">
-        <label htmlFor="email" className="text-sm font-medium text-slate-700">Email Address</label>
+        <label htmlFor="email" className="text-sm font-medium text-forest">Email Address</label>
         <Input
           id="email"
           type="email"
@@ -107,7 +107,7 @@ export default function ContactForm({ className }) {
       </div>
 
       <div className="space-y-2">
-        <label htmlFor="subject" className="text-sm font-medium text-slate-700">Subject</label>
+        <label htmlFor="subject" className="text-sm font-medium text-forest">Subject</label>
         <Input
           id="subject"
           value={formData.subject}
@@ -117,7 +117,7 @@ export default function ContactForm({ className }) {
       </div>
 
       <div className="space-y-2">
-        <label htmlFor="message" className="text-sm font-medium text-slate-700">Message</label>
+        <label htmlFor="message" className="text-sm font-medium text-forest">Message</label>
         <Textarea
           id="message"
           required
@@ -130,7 +130,7 @@ export default function ContactForm({ className }) {
 
       <Button
         type="submit"
-        className="w-full bg-emerald-600 hover:bg-emerald-700 text-white"
+        className="w-full bg-forest hover:bg-forest/90 text-white"
         disabled={mutation.isPending}
       >
         {mutation.isPending ? (

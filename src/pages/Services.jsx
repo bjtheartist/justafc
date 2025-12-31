@@ -116,7 +116,7 @@ export default function Services() {
   ];
 
   return (
-    <div className="bg-stone-50 flex flex-col min-h-screen">
+    <div className="bg-cream flex flex-col min-h-screen">
       <SEO
         title="Our Services | Just AFC - Adult Foster Care & Support"
         description="Comprehensive care services including 24/7 supervision, medication management, meal preparation, laundry, and medical appointment assistance at Just AFC."
@@ -144,39 +144,39 @@ export default function Services() {
       {/* Services Grid */}
       <div className="flex-grow relative">
         {/* Decorative background elements */}
-        <div className="absolute top-0 left-0 w-full h-64 bg-gradient-to-b from-emerald-900 to-stone-50 -z-10"></div>
+        <div className="absolute top-0 left-0 w-full h-64 bg-gradient-to-b from-forest to-cream -z-10"></div>
 
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 pb-12 md:pb-24 pt-8">
           <StaggerContainer className="grid gap-6 md:gap-10" staggerDelay={0.15}>
             {servicesList.map((service, index) => (
               <StaggerItem key={service.id}>
-                <div className="group bg-white rounded-3xl shadow-xl shadow-emerald-900/5 overflow-hidden border border-slate-100 hover:shadow-2xl hover:shadow-emerald-900/10 transition-all duration-500 transform hover:-translate-y-1">
+                <div className="group bg-white rounded-3xl shadow-xl shadow-forest/5 overflow-hidden border border-forest/10 hover:shadow-2xl hover:shadow-forest/10 transition-all duration-500 transform hover:-translate-y-1">
                   <div className="flex flex-col md:flex-row min-h-0 md:min-h-[320px]">
                     {/* Icon Side */}
-                    <div className="md:w-1/3 bg-gradient-to-br from-emerald-50 to-teal-50/30 p-6 md:p-10 flex flex-col justify-center items-center text-center border-b md:border-b-0 md:border-r border-slate-100 relative overflow-hidden">
+                    <div className="md:w-1/3 bg-gradient-to-br from-sage/10 to-sage/5 p-6 md:p-10 flex flex-col justify-center items-center text-center border-b md:border-b-0 md:border-r border-forest/10 relative overflow-hidden">
                       {/* Background blob */}
-                      <div className="absolute inset-0 bg-emerald-100/50 rounded-full blur-3xl transform scale-150 translate-y-10 opacity-0 group-hover:opacity-100 transition-opacity duration-700"></div>
+                      <div className="absolute inset-0 bg-sage/20 rounded-full blur-3xl transform scale-150 translate-y-10 opacity-0 group-hover:opacity-100 transition-opacity duration-700"></div>
 
-                      <div className="relative z-10 w-24 h-24 bg-white rounded-2xl shadow-lg shadow-emerald-100 flex items-center justify-center text-emerald-600 mb-6 group-hover:scale-110 group-hover:bg-emerald-600 group-hover:text-white transition-all duration-500">
+                      <div className="relative z-10 w-24 h-24 bg-white rounded-2xl shadow-lg shadow-sage/20 flex items-center justify-center text-sage mb-6 group-hover:scale-110 group-hover:bg-forest group-hover:text-white transition-all duration-500">
                         <service.icon className="w-12 h-12" />
                       </div>
-                      <h3 className="relative z-10 text-2xl font-bold text-emerald-950 mb-2">{service.title}</h3>
-                      <div className="w-12 h-1 bg-emerald-300 rounded-full mt-4 group-hover:w-20 transition-all duration-500"></div>
+                      <h3 className="relative z-10 text-2xl font-bold text-forest mb-2">{service.title}</h3>
+                      <div className="w-12 h-1 bg-sage rounded-full mt-4 group-hover:w-20 transition-all duration-500"></div>
                     </div>
 
                     {/* Content Side */}
                     <div className="p-6 md:p-10 md:w-2/3 flex flex-col justify-center">
-                      <p className="text-lg md:text-xl text-slate-600 mb-6 md:mb-8 leading-relaxed font-light">
+                      <p className="text-lg md:text-xl text-forest/70 mb-6 md:mb-8 leading-relaxed font-light">
                         {service.description}
                       </p>
-                      <h4 className="text-sm font-bold text-emerald-600 uppercase tracking-widest mb-4">What's Included</h4>
+                      <h4 className="text-sm font-bold text-sage uppercase tracking-widest mb-4">What's Included</h4>
                       <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                         {service.details.map((detail, idx) => (
                           <div key={idx} className="flex items-start gap-3 group/item">
-                            <div className="mt-1 p-0.5 bg-emerald-100 rounded-full text-emerald-600 group-hover/item:bg-emerald-600 group-hover/item:text-white transition-colors duration-300">
+                            <div className="mt-1 p-0.5 bg-sage/20 rounded-full text-sage group-hover/item:bg-forest group-hover/item:text-white transition-colors duration-300">
                               <Check className="w-3.5 h-3.5" />
                             </div>
-                            <span className="text-slate-700 group-hover/item:text-emerald-900 transition-colors duration-300">{detail}</span>
+                            <span className="text-forest/80 group-hover/item:text-forest transition-colors duration-300">{detail}</span>
                           </div>
                         ))}
                       </div>
@@ -189,25 +189,25 @@ export default function Services() {
 
           {/* CTA Section */}
           <FadeIn>
-            <div className="mt-12 md:mt-24 bg-emerald-900 rounded-2xl md:rounded-[2.5rem] p-6 md:p-20 text-center text-white relative overflow-hidden shadow-2xl shadow-emerald-900/30">
+            <div className="mt-12 md:mt-24 bg-forest rounded-2xl md:rounded-[2.5rem] p-6 md:p-20 text-center text-white relative overflow-hidden shadow-2xl shadow-forest/30">
               {/* Background Patterns */}
               <div className="absolute inset-0 opacity-20">
-                <div className="absolute -top-24 -right-24 w-96 h-96 bg-emerald-400 rounded-full blur-3xl"></div>
-                <div className="absolute -bottom-24 -left-24 w-96 h-96 bg-teal-400 rounded-full blur-3xl"></div>
+                <div className="absolute -top-24 -right-24 w-96 h-96 bg-sage rounded-full blur-3xl"></div>
+                <div className="absolute -bottom-24 -left-24 w-96 h-96 bg-sage rounded-full blur-3xl"></div>
               </div>
 
               <div className="relative z-10 max-w-3xl mx-auto">
                 <h2 className="text-2xl sm:text-4xl md:text-5xl font-bold mb-6 md:mb-8 tracking-tight">Not sure which care level is right?</h2>
-                <p className="text-emerald-100 text-base sm:text-xl mb-8 md:mb-10 leading-relaxed font-light">
+                <p className="text-cream/90 text-base sm:text-xl mb-8 md:mb-10 leading-relaxed font-light">
                   Our experienced team is here to help assess your loved one's needs and recommend the most appropriate care plan. Contact us today for a free, no-obligation consultation.
                 </p>
                 <div className="flex flex-col sm:flex-row justify-center gap-4 sm:gap-6">
                   <Link to={createPageUrl('Contact')}>
-                    <Button className="bg-white text-emerald-950 hover:bg-emerald-50 text-base md:text-lg px-8 py-6 rounded-full shadow-lg hover:shadow-xl transform hover:-translate-y-1 transition-all duration-300 font-semibold w-full sm:w-auto">
+                    <Button className="bg-white text-forest hover:bg-cream text-base md:text-lg px-8 py-6 rounded-full shadow-lg hover:shadow-xl transform hover:-translate-y-1 transition-all duration-300 font-semibold w-full sm:w-auto">
                       Contact Us Today
                     </Button>
                   </Link>
-                  <div className="flex items-center justify-center gap-3 text-emerald-50 font-medium bg-white/10 backdrop-blur-md px-6 py-4 rounded-full border border-white/20 hover:bg-white/20 transition-colors duration-300 w-full sm:w-auto">
+                  <div className="flex items-center justify-center gap-3 text-cream font-medium bg-white/10 backdrop-blur-md px-6 py-4 rounded-full border border-white/20 hover:bg-white/20 transition-colors duration-300 w-full sm:w-auto">
                     <Phone className="w-5 h-5" />
                     <span className="text-base md:text-lg tracking-wide">(517) 402-1891</span>
                   </div>
