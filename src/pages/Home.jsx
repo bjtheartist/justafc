@@ -136,7 +136,7 @@ export default function Home() {
           {/* Status Bar */}
           <div className="absolute bottom-0 left-0 right-0 bg-white/90 backdrop-blur-sm border-t border-forest/10 p-4 flex justify-between items-center text-xs font-sans font-bold uppercase tracking-widest text-forest/70 px-8">
             <span>Lansing, MI</span>
-            <span>Est. 2024</span>
+            <span>Est. 2025</span>
           </div>
         </div>
       </section>
