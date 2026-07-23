@@ -9,6 +9,7 @@ import ContactForm from '@/components/ContactForm';
 
 import { FadeIn, ScaleIn, SlideIn, StaggerContainer, StaggerItem, ParallaxSection } from '@/components/ScrollReveal';
 import SEO from '@/components/SEO';
+import WelcomePopup from '@/components/WelcomePopup';
 
 export default function Home() {
   const [wordIndex, setWordIndex] = useState(0);
@@ -70,6 +71,7 @@ export default function Home() {
         title="Just AFC - Premier Adult Foster Care in Lansing, MI"
         description="Providing exceptional adult foster care in a warm, family-like environment in Lansing, Michigan. 24/7 support, medication management, and compassionate care."
         keywords="adult foster care, AFC Lansing, senior care, assisted living, Just AFC" />
+      <WelcomePopup />
 
 
       {/* Hero Section - Split Layout */}
